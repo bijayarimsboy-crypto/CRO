@@ -15,82 +15,26 @@
     text-align: center;
   }
 </style>
-  <header>
-<img src="LIC_HFL_Logo.png" alt="Company Logo" class="logo">
-<h1>Central Regional Office</h1>
-<style>
-    @keyframes blink {
-      50% {
-        opacity: 0;
-        color: blue;
-      }
-      100% {
-        opacity: 1;
-        color: green;
-    }
-
-    .blinking-text {
-      animation: blink 1s infinite;
-    }
-  </style>
-<img src="RM_Sir1.JPEG" alt="Company Logo" class="logo1">
-<h1 class="blinking-text">Mr. Prajod Viswanathan</h1>
-<h1 class="blinking-text">Regional Manager</h1>
-<style>
-  .logo {
-    height: 100px;
-  }
-</style>
-<style>
-  .logo1 {
-    height: 250px;
-    width: 320px;
-  }
-</style>
+  <header class="site-header">
+<figure>
+<img src="LIC_HFL_Logo.png" style="float: left; margin-left: 740px;margin-top: -205px;" alt="Company Logo" class="img-hover1">
+<figcaption class="hero1">Mr. Prajod Viswanathan</figcaption>
+<figcaption class="hero2">Regional Manager,CRO</figcaption>
+<!--h1 class="blinking-text">Regional Manager</h1-->
+</figure>
   </header>
-<nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <p>Welcome To Central Region</p>
-  </section>
+    <h2>Welcome To Central Region</h2>
 
+  </section>
   <!-- About Section -->
   <section id="about">
     <h2>Branches Under Central RO</h2>
- <style>
-   .table-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px; /* Add space between tables */
-    }
-    table {
-      width: 33%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    th, td {
-      padding: 1px;
-      text-align: left;
-      border: 1px solid #ddd;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-    td {
-       color: blue;
-    }
-  </style>
 <div class="table-container">
 <table>
     <thead>
-        <th>Bhopal Cluster</th>
+        <th colspan="2">Bhopal Cluster</th>
     </thead>
     <thead>
       <tr>
@@ -100,9 +44,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td> <td>BETUL</td>   
-      </tr>
+      <tr><td>1</td> <td>BETUL</td></tr>
       <tr>
         <td>2</td> <td>BHOPAL</td>  
       </tr>
@@ -135,7 +77,7 @@
 
 <table>
     <thead>
-        <th>Indore Cluster</th>
+        <th colspan="2">Indore Cluster</th>
     </thead>
     <thead>
       <tr>
@@ -171,7 +113,7 @@
 
 <table>
     <thead>
-        <th>Raipur Cluster</th>
+        <th colspan="2">Raipur Cluster</th>
     </thead>
     <thead>
       <tr>
@@ -206,18 +148,44 @@
   </table>
 </div>
   </section>
+<h2>Photo Gallery</h2>
+<div class="gallery">
+    <img src="Gallery1.jpeg" onclick="openLightbox(this.src)">
+    <img src="Gallery3.jpeg" onclick="openLightbox(this.src)">
+    <img src="Gallery4.jpeg" onclick="openLightbox(this.src)">
+    <img src="Gallery5.jpeg" onclick="openLightbox(this.src)">
+    <img src="Gallery6.jpeg" onclick="openLightbox(this.src)">
+</div>
+<script src="Script.js"></script>
+<div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+    
+<style>
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 260px;
+}
+.collage img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+</style>
 
   <!-- Services Section -->
   <section id="services">
     <h2>Services</h2>
     <ul>
-      <li>Home Loan With Lowest Interest Rate</li>
+      <img src="add.png" alt="Add Logo" class="add_logo">
     
     </ul>
   </section>
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact Me</h2>
+    <h2>Contact Us</h2>
     <form action="#">
       <label for="name">Your Name:</label>
       <input type="text" id="name" name="name" required>
@@ -231,10 +199,17 @@
       <button type="submit">Send Message</button>
     </form>
   </section>
-
+<nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   <!-- Footer Section -->
   <footer>
-    <p>&copy; 2025 My Awesome Website</p>
+    <p>&copy; 2025 CRO,Bhopal</p>
   </footer>
 
 </body>

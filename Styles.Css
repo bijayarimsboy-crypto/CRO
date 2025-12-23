@@ -39,16 +39,83 @@ header nav ul li a {
   color: white;
   font-size: 18px;
 }
+.img-round {
+  width: 200px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3498db;
+}
+.img-hover {
+  width: 100px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+}
 
+.img-hover1 {
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+  align-items: left;
+}
+.img-hover:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.table-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px; /* Add space between tables */
+    }
+    table {
+      width: 33%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      padding: 1px;
+      text-align: middle;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    td {
+       color: blue;
+    }
 .hero {
   background-color: #3498db;
   color: white;
-  
-  padding: 20px 10px;
+  padding: 2px 2px;
 }
 
-.hero h1 {
-  font-size: 48px;
+.hero1 {
+    display: flex;
+    justify-content: flex-end; /* left | center | right */
+    align-items: bottom;   /* top | center | bottom */
+    height: 20px;
+    color: white;
+    position: absolute;
+    top: 150px;
+    left: 1320px;
+    padding: 20px 10px;
+
+}
+
+.hero2 {
+    position: absolute;
+    color: white;
+    top: 170px;
+    left: 1320px;
+  padding: 20px 10px;
+}
+figure {
+  text-align: right;
+}
+
+figcaption {
+  margin-top: 200px;
+  font-weight: bold;
 }
 
 section {
@@ -58,7 +125,7 @@ section {
 
 section h2 {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 
 section p, section ul {
@@ -108,4 +175,77 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Lightbox */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.site-header {
+  background-image: 
+         url("LIC Housing Finance Limited_idGOKKLE-S_1.jpeg"),
+         url("RM_Sir.JPEG"); 
+  justify-content: space-between;
+  background-position: 
+      left center,
+      right center;
+  background-repeat: 
+      no-repeat,
+      no-repeat;
+  background-size: 
+      auto 420px,
+      auto 580px;
+  height: 420px;
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes blink {
+      50% {
+        opacity: 0;
+        color: blue;
+      }
+      100% {
+        opacity: 1;
+        color: green;
+    }
+.blinking-text {
+        animation: blink 1s infinite;
+    }
 }
