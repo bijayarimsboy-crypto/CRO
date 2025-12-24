@@ -250,13 +250,13 @@ footer {
     }
 }
 @media screen and (max-width: 1024px) {
-      h1 {
+      body {
         font-size: 28px;
       }
     }
 
     /* Mobile */
     @media screen and (max-width: 600px) {
-      h1 {
+      body {
         font-size: 22px;
       }
