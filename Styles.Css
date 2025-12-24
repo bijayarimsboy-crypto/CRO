@@ -249,3 +249,14 @@ footer {
         animation: blink 1s infinite;
     }
 }
+@media screen and (max-width: 1024px) {
+      h1 {
+        font-size: 28px;
+      }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 22px;
+      }
